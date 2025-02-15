@@ -14,14 +14,29 @@ function trovaMassimo(n1, n2, n3, n4, n5) {
     return maggiore
 }
 
-let risultato = trovaMassimo(11, 7, 3, 1, 9)
+let risultato1 = trovaMassimo(11, 7, 3, 1, 9)
 
-console.log(risultato)
+console.log(risultato1)
 
 
 // 2 - Scrivi una funzione contaVocali(str) che accetti una stringa e restituisca il numero di vocali (a, e, i, o, u) presenti nella stringa.
 
+function contaVocali(str) {
+    const stringa = str.toString()
+    let count = 0
 
+    for (let i = 0; i < stringa.length; i++) {
+        if (stringa.charAt(i) === 'a' || stringa.charAt(i) === 'e' || stringa.charAt(i) === 'i' || stringa.charAt(i) === 'o' || stringa.charAt(i) === 'u') {
+            count += 1
+        }
+    }
+
+    return count
+}
+
+let risultato2 = contaVocali('supercalifragilistichespiralidoso')
+
+console.log(risultato2);
 
 // 3 - Scrivi una funzione invertiArray(arr) che accetti un array e restituisca un nuovo array con gli elementi in ordine inverso.
 
