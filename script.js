@@ -45,10 +45,25 @@ function invertiArray(i1, i2, i3, i4, i5) {
     return arrayInvertito
 }
 
-let risultato3 = invertiArray(1, 2, 3, 4, 5)
+let risultato3 = invertiArray(1, 'due', 3, 'quattro', 5)
 console.log(risultato3)
 
 // 4 - Scrivi una funzione generaCasuali(n, min, max) che restituisca un array di n numeri casuali compresi tra min e max.
+
+function generaCasuali(n, min, max) {
+    let arrayNumeri = []
+
+    for (let i = 1; i <= n; i++) {
+        let numeroCasuale = Math.round(Math.random() * (max - min) + min)
+        arrayNumeri.push(numeroCasuale)
+    }
+
+    return arrayNumeri
+}
+
+let risultato4 = generaCasuali(50, 10, 20)
+
+console.log(risultato4)
 
 // 5 - Scrivi una funzione filtraMaggioriDi che prende un array di numeri e un valore, e restituisce un nuovo array contenente solo i numeri maggiori del valore specificato.
 
