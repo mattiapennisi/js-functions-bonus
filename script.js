@@ -1,6 +1,27 @@
 // 1 - Scrivi una funzione trovaMassimo(arr) che accetti un array di numeri e restituisca il valore massimo presente.
 
+function trovaMassimo(n1, n2, n3, n4, n5) {
+    const numeriArray = [n1, n2, n3, n4, n5]
+    let maggiore = 0
+    
+    for (let i = 0; i < numeriArray.length - 1; i++) {
+
+        if (numeriArray[i] > maggiore) {
+            maggiore = numeriArray[i]
+        }
+    }
+
+    return maggiore
+}
+
+let risultato = trovaMassimo(11, 7, 3, 1, 9)
+
+console.log(risultato)
+
+
 // 2 - Scrivi una funzione contaVocali(str) che accetti una stringa e restituisca il numero di vocali (a, e, i, o, u) presenti nella stringa.
+
+
 
 // 3 - Scrivi una funzione invertiArray(arr) che accetti un array e restituisca un nuovo array con gli elementi in ordine inverso.
 
