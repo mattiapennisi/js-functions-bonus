@@ -40,6 +40,14 @@ console.log(risultato2);
 
 // 3 - Scrivi una funzione invertiArray(arr) che accetti un array e restituisca un nuovo array con gli elementi in ordine inverso.
 
+function invertiArray(i1, i2, i3, i4, i5) {
+    const arrayInvertito = [i5, i4, i3, i2, i1]
+    return arrayInvertito
+}
+
+let risultato3 = invertiArray(1, 2, 3, 4, 5)
+console.log(risultato3)
+
 // 4 - Scrivi una funzione generaCasuali(n, min, max) che restituisca un array di n numeri casuali compresi tra min e max.
 
 // 5 - Scrivi una funzione filtraMaggioriDi che prende un array di numeri e un valore, e restituisce un nuovo array contenente solo i numeri maggiori del valore specificato.
