@@ -67,7 +67,56 @@ console.log(risultato4)
 
 // 5 - Scrivi una funzione filtraMaggioriDi che prende un array di numeri e un valore, e restituisce un nuovo array contenente solo i numeri maggiori del valore specificato.
 
+function filtraMaggioriDi(value, n1, n2, n3, n4, n5) {
+    const arrayOriginale = [n1, n2, n3, n4, n5]
+    let arrayMaggiori = []
+
+    for (let i = 0; i <= arrayOriginale.length - 1; i++) {
+        if (arrayOriginale[i] > value) {
+            arrayMaggiori.push(arrayOriginale[i])
+        }
+    } 
+
+    return arrayMaggiori
+} 
+
+let risultato5 = filtraMaggioriDi(9, 1, 5, 10, 15, 25)
+
+console.log(risultato5)
+
 // 6 - Scrivi una funzione parolaPiuLunga(frase) che accetti una stringa contenente più parole e restituisca la parola più lunga.
+
+function parolaPiuLunga(frase) {
+    let conteggioMaggiore = 0
+    let parole = ''
+    let parolaMaggiore = ''
+
+    for (let i = 0; i <= frase.length; i++) {
+        if (frase.charAt(i) === ' ') {
+            if (parole.length > conteggioMaggiore) {
+                conteggioMaggiore = parole.length
+                parolaMaggiore = parole
+                parole = ''
+            } else {
+                parole = ''
+            }
+        } else {
+        parole += frase.charAt(i)
+        }
+    }
+
+    if (parole.length > conteggioMaggiore) {
+        conteggioMaggiore = parole.length
+        parolaMaggiore = parole
+        parole = ''
+    }
+
+    return parolaMaggiore
+}
+
+let risultato6 = parolaPiuLunga('html css javascript')
+
+console.log(risultato6)
 
 // 7 - Scrivi una funzione unisciEOrdina che prende due array di numeri, li unisce in un unico array e restituisce l'array risultante ordinato in modo crescente.
 
