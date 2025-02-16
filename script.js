@@ -149,4 +149,21 @@ console.log(risultato7)
 
 // 8 - Scrivi una funzione contaOccorrenze che prende un array e un valore, e restituisce il numero di volte che il valore appare nell'array.
 
+function contaOccorrenze(value, array) {
+    let conteggio = 0
+
+    for (let i = 0; i <= array.length -1; i++) {
+        if (value == array[i]) {
+            conteggio += 1
+        }
+    }
+
+    return conteggio
+}
+
+let risultato8 = contaOccorrenze(3, [3, 'tre', 3, 3, 'tre', 4, 8, 9, 3])
+
+console.log(risultato8);
+
+
 // 9 - Scrivi una funzione rimuoviDuplicati che prende un array e restituisce un nuovo array senza elementi duplicati. L'ordine degli elementi deve essere mantenuto.
