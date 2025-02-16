@@ -1,20 +1,19 @@
 // 1 - Scrivi una funzione trovaMassimo(arr) che accetti un array di numeri e restituisca il valore massimo presente.
 
-function trovaMassimo(n1, n2, n3, n4, n5) {
-    const numeriArray = [n1, n2, n3, n4, n5]
+function trovaMassimo(arr) {
     let maggiore = 0
     
-    for (let i = 0; i < numeriArray.length - 1; i++) {
+    for (let i = 0; i < arr.length - 1; i++) {
 
-        if (numeriArray[i] > maggiore) {
-            maggiore = numeriArray[i]
+        if (arr[i] > maggiore) {
+            maggiore = arr[i]
         }
     }
 
     return maggiore
 }
 
-let risultato1 = trovaMassimo(11, 7, 3, 1, 9)
+let risultato1 = trovaMassimo([11, 7, 3, 1, 9])
 
 console.log(risultato1)
 
@@ -40,12 +39,20 @@ console.log(risultato2);
 
 // 3 - Scrivi una funzione invertiArray(arr) che accetti un array e restituisca un nuovo array con gli elementi in ordine inverso.
 
-function invertiArray(i1, i2, i3, i4, i5) {
-    const arrayInvertito = [i5, i4, i3, i2, i1]
+function invertiArray(arr) {
+    const arrayInvertito = []
+    let arrayIndice = null
+
+    for (let i = 0; i < arr.length; i++) {
+        arrayIndice = arr[i]
+
+        arrayInvertito.unshift(arrayIndice)
+    }
+
     return arrayInvertito
 }
 
-let risultato3 = invertiArray(1, 'due', 3, 'quattro', 5)
+let risultato3 = invertiArray([1, 'due', 3, 'quattro', 5])
 console.log(risultato3)
 
 // 4 - Scrivi una funzione generaCasuali(n, min, max) che restituisca un array di n numeri casuali compresi tra min e max.
@@ -67,20 +74,19 @@ console.log(risultato4)
 
 // 5 - Scrivi una funzione filtraMaggioriDi che prende un array di numeri e un valore, e restituisce un nuovo array contenente solo i numeri maggiori del valore specificato.
 
-function filtraMaggioriDi(value, n1, n2, n3, n4, n5) {
-    const arrayOriginale = [n1, n2, n3, n4, n5]
+function filtraMaggioriDi(value, arr) {
     let arrayMaggiori = []
 
-    for (let i = 0; i <= arrayOriginale.length - 1; i++) {
-        if (arrayOriginale[i] > value) {
-            arrayMaggiori.push(arrayOriginale[i])
+    for (let i = 0; i <= arr.length - 1; i++) {
+        if (arr[i] > value) {
+            arrayMaggiori.push(arr[i])
         }
     } 
 
     return arrayMaggiori
 } 
 
-let risultato5 = filtraMaggioriDi(9, 1, 5, 10, 15, 25)
+let risultato5 = filtraMaggioriDi(7, [1, 5, 10, 15, 25])
 
 console.log(risultato5)
 
@@ -119,6 +125,27 @@ let risultato6 = parolaPiuLunga('html css javascript')
 console.log(risultato6)
 
 // 7 - Scrivi una funzione unisciEOrdina che prende due array di numeri, li unisce in un unico array e restituisce l'array risultante ordinato in modo crescente.
+
+function unisciEOrdina(arr1, arr2) {
+    let arraySomma = [...arr1, ...arr2]
+
+    for (let index = 0; index < arraySomma.length - 1; index++) {
+        for (let i = 0; i < arraySomma.length - 1 - index; i++) {
+            if (arraySomma[i] > arraySomma[i + 1]) {
+                
+                let maggiore = arraySomma[i];
+                arraySomma[i] = arraySomma[i + 1];
+                arraySomma[i + 1] = maggiore;
+            }
+        }
+    }
+
+    return arraySomma
+}
+
+let risultato7 = unisciEOrdina([4, 7, 10], [8, 5, 2, 3, 6, 9, 1])
+
+console.log(risultato7)
 
 // 8 - Scrivi una funzione contaOccorrenze che prende un array e un valore, e restituisce il numero di volte che il valore appare nell'array.
 
