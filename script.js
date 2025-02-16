@@ -127,7 +127,11 @@ console.log(risultato6)
 // 7 - Scrivi una funzione unisciEOrdina che prende due array di numeri, li unisce in un unico array e restituisce l'array risultante ordinato in modo crescente.
 
 function unisciEOrdina(arr1, arr2) {
-    let arraySomma = [...arr1, ...arr2]
+    let arraySomma = arr1
+    
+    for (let i = 0; i < arr2.length; i++) {
+        arraySomma.push(arr2[i])
+    }
 
     for (let index = 0; index < arraySomma.length - 1; index++) {
         for (let i = 0; i < arraySomma.length - 1 - index; i++) {
